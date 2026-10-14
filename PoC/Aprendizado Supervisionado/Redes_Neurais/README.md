@@ -198,6 +198,14 @@ Diferentes tipos de problemas computacionais exigem topologias especializadas de
 ### Sobre
 Este repositório é dedicado ao estudo e exploração de Redes Neurais Artificiais (RNAs), desde seus fundamentos teóricos até a implementação prática de modelos como o Perceptron e o Multilayer Perceptron (MLP). O objetivo é fornecer exemplos claros e funcionais que demonstrem os conceitos de aprendizado, otimização e avaliação de desempenho em diferentes conjuntos de dados.
 
+
+| Modelo | Dataset Usado | Papel no Experimento | Métricas de Avaliação | Função de Ativação |
+| :--- | :--- | :--- | :--- | :--- |
+| **Perceptron** | **MNIST** | **Classificador Linear Simples.** Ótimo para entender a base das redes neurais com dígitos em preto e branco. | Acurácia, Matriz de Confusão | **Step function** (ou Sigmoid/Softmax se adaptado para multi-classe) |
+| **Regressão Logística** | **PathMNIST** | **Classificador Linear.** Serve como uma excelente linha de base (*baseline*) para imagens médicas complexas. | Acurácia, F1-Score, AUC-ROC | **Softmax** (Multinomial, já que o PathMNIST possui 9 classes) |
+| **MLP** *(Multi-Layer Perceptron)* | **PathMNIST** | **Classificador Não-Linear.** Camadas ocultas aprendem padrões complexos, ideal para tecidos médicos. | Acurácia, F1-Score, AUC-ROC, Loss | **ReLU** (camadas ocultas) e **Softmax** (camada de saída) |
+
+
 ### Como Usar
 
 Para explorar os notebooks e replicar os experimentos, siga os passos abaixo. Tenha o Jupyter Notebook instalado em sua máquina:
